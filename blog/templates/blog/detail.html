@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+<title>{% block title %}{{ blog.title }}{% endblock %}</title>
+{% block head %}
+{% endblock %}
+{% block content %}
+    <h1 class="text-center pt-3">{{ blog.title }}</h1>
+    <p class="text-center">{{ blog.pub_date_pretty}}</p>
+    <br />
+    <p class="text-center"><img class="img-fluid" src="{{ blog.image.url }}"  alt=""></p>
+    <br />
+    <br />
+    <p>{{ blog.body | linebreaks }}</p>
+{% endblock %}
