@@ -8,6 +8,9 @@ class Blog(models.Model):
     pub_date = models.DateTimeField()
     image = models.ImageField(upload_to='images/')
 
+    class Meta:
+        ordering = ('-pub_date')
+
     def summary(self):
         return self.body[:100]
 
