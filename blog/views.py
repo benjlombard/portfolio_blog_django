@@ -1,6 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 from django.core.paginator import Paginator, EmptyPage,PageNotAnInteger
 
+
 # Create your views here.
 from .models import Blog
 def allblogs(request):

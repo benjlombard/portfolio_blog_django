@@ -17,7 +17,7 @@
     <div class="row">
            {% for blog in blogs %}
         <div class="col-md-4">
-         <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+         <a href="{{ blog.get_absolute_url }}"><h3>{{ blog.title }}</h3></a>
             {{ blog.pub_date_pretty}}
           <br />
           <div class="card mb-4 shadow-sm">
