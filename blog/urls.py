@@ -16,10 +16,13 @@ Including another URLconf
 
 from django.urls import path,include
 from . import views
+from .feeds import LatestPostsFeed
 
 app_name = 'blog'
 
 urlpatterns = [
     path('',views.allblogs,name='allblogs'),
-    path('<int:blog_id>/',views.detail,name='detail')
+    path('<int:blog_id>/',views.detail,name='detail'),
+    path('feed/', LatestPostsFeed(), name='post_feed'),
+
 ]

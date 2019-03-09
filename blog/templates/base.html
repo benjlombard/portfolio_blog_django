@@ -22,8 +22,9 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link" href="https://twitter.com/pytlin">Twitter</a>
-      <a class="nav-item nav-link" href="https://benjlombard.github.io/">Resume</a>
+      <a class="nav-item nav-link" href="https://benjlombard.github.io/">Portfolio</a>
       <a class="nav-item nav-link active" href="{% url 'blog:allblogs' %}">Blog</a>
+        <a class="nav-item nav-link" href="{% url 'blog:post_feed' %}">RSS Feed</a>
     </div>
   </div>
 </nav>
@@ -72,25 +73,30 @@
       <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
           <a class="btn-floating btn-tw mx-1" href="https://twitter.com/pytlin">
-            <i class="fab fa-twitter"> </i>
+            <i class="fab fa-2x fa-twitter"> </i>
           </a>
         </li>
         <li class="list-inline-item">
           <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/benjamin-lombard-41667816b/">
-            <i class="fab fa-linkedin-in"> </i>
+            <i class="fab fa-2x fa-linkedin-in"> </i>
           </a>
         </li>
             <li class="list-inline-item">
           <a class="btn-floating btn-li mx-1" href="https://github.com/benjlombard">
-            <i class="fab fa-github"> </i>
+            <i class="fab fa-2x fa-github"> </i>
           </a>
         </li>
           <li class="list-inline-item">
           <a class="btn-floating btn-li mx-1" href="https://stackoverflow.com/users/11175386/pytlin2718">
-            <i class="fab fa-stack-overflow"> </i>
+            <i class="fab fa-2x fa-stack-overflow"> </i>
           </a>
         </li>
-
+        </li>
+          <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="{% url 'blog:post_feed' %}">
+            <i class="fab fa-2x fa-rss-square" aria-hidden="true"> </i>
+          </a>
+        </li>
 
 
       </ul>

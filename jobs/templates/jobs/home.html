@@ -11,7 +11,8 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+ <link rel="stylesheet" href="{% static 'base.css' %}">
 
     <style>
       .bd-placeholder-img {
@@ -42,8 +43,9 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link" href="https://twitter.com/pytlin">Twitter</a>
-      <a class="nav-item nav-link" href="https://benjlombard.github.io/">Resume</a>
+      <a class="nav-item nav-link" href="https://benjlombard.github.io/">Portfolio</a>
       <a class="nav-item nav-link" href="{% url 'blog:allblogs' %}">Blog</a>
+        <a class="nav-item nav-link" href="{% url 'blog:post_feed' %}">RSS Feed</a>
     </div>
   </div>
 </nav>
@@ -85,11 +87,57 @@
 
 </main>
 
-<footer class="text-muted">
-  <div class="container text-center">
+    <!-- Footer -->
+<footer class="page-footer font-small special-color-dark bg-dark pt-2">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/pytlin">
+            <i class="fab fa-2x fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/benjamin-lombard-41667816b/">
+            <i class="fab fa-2x fa-linkedin-in"> </i>
+          </a>
+        </li>
+            <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://github.com/benjlombard">
+            <i class="fab fa-2x fa-github"> </i>
+          </a>
+        </li>
+          <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://stackoverflow.com/users/11175386/pytlin2718">
+            <i class="fab fa-2x fa-stack-overflow"> </i>
+          </a>
+        </li>
+        </li>
+          <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="{% url 'blog:post_feed' %}">
+            <i class="fab fa-2x fa-rss-square" aria-hidden="true"> </i>
+          </a>
+        </li>
+
+
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
       <p>&copy; Benjamin Lombard {%  now "Y" %}</p>
-  </div>
-</footer>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
