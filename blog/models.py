@@ -9,7 +9,7 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='images/')
 
     class Meta:
-        ordering = ('-pub_date')
+        ordering = ('-pub_date',)
 
     def summary(self):
         return self.body[:100]
