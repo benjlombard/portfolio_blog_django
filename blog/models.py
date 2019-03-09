@@ -1,13 +1,16 @@
 from django.db import models
 
 # Create your models here.
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedManager,self).get_queryset()
 
 class Blog(models.Model):
     title=models.CharField(max_length=255)
     body = models.TextField()
     pub_date = models.DateTimeField()
     image = models.ImageField(upload_to='images/')
-
+    published = PublishedManager()  # Our custom manager.
     class Meta:
         ordering = ('-pub_date',)
 
